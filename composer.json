@@ -1,0 +1,21 @@
+{
+    "name": "adebayo27/wetrocloud-sdk",
+    "description": "A laravel sdk for wetrocloud",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Wetrocloud\\Sdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adebayo27",
+            "email": "adekoya.adebayojubril@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.9",
+        "symfony/http-foundation": "^7.2"
+    },
+    "minimum-stability": "stable"
+}
