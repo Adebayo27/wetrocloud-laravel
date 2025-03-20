@@ -2,6 +2,7 @@
     "name": "adebayo27/wetrocloud-sdk",
     "description": "A laravel sdk for wetrocloud",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Wetrocloud\\Sdk\\": "src/"
