@@ -12,19 +12,6 @@ You can install the SDK using Composer:
 composer require adebayo27/wetrocloud-sdk
 ```
 
-If the package is not yet published to Packagist, install it from a local path:
-```sh
-composer require adebayo27/wetrocloud-sdk --dev
-```
-
-### Publishing Configurations
-After installation, publish the config file:
-```sh
-php artisan vendor:publish --tag=wetrocloud-config
-```
-
-This will create a `config/wetrocloud.php` file where you can set your API key.
-
 ### Environment Variables
 Ensure you add your Wetrocloud API key to your `.env` file:
 ```ini
@@ -43,11 +30,11 @@ use Wetrocloud\Sdk\WetrocloudClient;
 
 class ExampleController extends Controller
 {
-    private WetrocloudClient $wetrocloud;
+    protected WetrocloudClient $wetrocloud;
 
-    public function __construct(WetrocloudClient $wetrocloud)
+    public function __construct()
     {
-        $this->wetrocloud = $wetrocloud;
+        $this->wetrocloud = new WetrocloudClient(env('WETROCLOUD_API_KEY'), 'v1');
     }
 }
 ```
@@ -80,6 +67,11 @@ $collections = $wetrocloud->listCollections();
 Creates a new collection with a unique ID.
 
 #### Usage
+```php
+$collection = $wetrocloud->createCollection();
+```
+or
+
 ```php
 $collection = $wetrocloud->createCollection('my_unique_collection');
 ```
@@ -218,4 +210,7 @@ if (isset($response['error'])) {
 For issues or feature requests, open an issue on GitHub or contribute via pull requests.
 
 GitHub Repository: [https://github.com/adebayo27/wetrocloud-sdk](https://github.com/adebayo27/wetrocloud-sdk)
+
+## Documentation
+For more details, check out the official API documentation: [https://docs.wetrocloud.com/introduction](Wetrocloud Docs)
 
