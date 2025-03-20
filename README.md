@@ -212,5 +212,5 @@ For issues or feature requests, open an issue on GitHub or contribute via pull r
 GitHub Repository: [https://github.com/adebayo27/wetrocloud-sdk](https://github.com/adebayo27/wetrocloud-sdk)
 
 ## Documentation
-For more details, check out the official API documentation: [https://docs.wetrocloud.com/introduction](Wetrocloud Docs)
+For more details, check out the official API documentation: [Wetrocloud Docs](https://docs.wetrocloud.com/introduction)
 
